@@ -31,7 +31,7 @@ jobs:
 
       #Set up yarn 
       - name: Github action for Yarn
-        uses: Borales/actions-yarn@v2.3.0
+        uses: Borales/actions-yarn@v2.1.0
         with:
           # Yarn command 
           cmd: install
@@ -42,5 +42,5 @@ jobs:
       - name: installing surge
         run: npm install -g surge
         
-      - name: deploying surge
+      - name: deploying on surge
         run: surge ./build http://reactapp_deploy.surge.sh/ --token ${{secrets.REACT_SURGE_TOKEN}}
