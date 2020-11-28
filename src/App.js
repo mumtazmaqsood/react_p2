@@ -2,7 +2,7 @@ import './App.css';
 
 function App() {
   return (
-    <h3>Hellow world</h3>
+    <h1>Successfully Deploy React app on Surge</h1>
   );
 }
 
