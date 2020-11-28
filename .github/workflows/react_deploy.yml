@@ -27,7 +27,7 @@ jobs:
       - name: Setup Node.js envirnoment
         uses: actions/setup-node@v2-beta
         with: 
-          version: 14     
+          node-version: 14     
 
       #Set up yarn 
       - name: Github action for Yarn
