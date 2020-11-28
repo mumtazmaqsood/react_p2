@@ -27,7 +27,7 @@ jobs:
       - name: Setup Node.js envirnoment
         uses: actions/setup-node@v2-beta
         with: 
-          node-version: 12     
+          node-version: 14     
 
       #Set up yarn 
       - name: Github action for Yarn
@@ -37,10 +37,10 @@ jobs:
           cmd: install
       
       - name: Creating build
-        run: npm run build
+        run: yarn build
         
       - name: installing surge
         run: npm install -g surge
         
       - name: deploying on surge
-        run: surge ./build http://reactapp_deploy.surge.sh/ --token ${{secrets.REACT_SURGE_TOKEN}}
+        run: surge ./build http://reactapp_deploy.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
